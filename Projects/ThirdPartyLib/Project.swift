@@ -5,5 +5,8 @@ let project = Project.makeModule(
     name: "ThirdPartyLib",
     product: .framework,
     packages: [],
-    dependencies: []
+    dependencies: [
+        .external(name: "RxSwift"),
+        .external(name: "RxCocoa")
+    ]
 )
