@@ -6,7 +6,8 @@ let project = Project.makeModule(
     product: .framework,
     packages: [],
     dependencies: [
-        .external(name: "RxSwift"),
-        .external(name: "RxCocoa")
+        .SPM.RxSwift,
+        .SPM.RxCocoa,
+        .SPM.RxRelay
     ]
 )
