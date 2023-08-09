@@ -2,7 +2,7 @@
 
 import ProjectDescription
 
-public extension TargetDependency {
+extension TargetDependency {
     public enum Projcet {}
 }
 
