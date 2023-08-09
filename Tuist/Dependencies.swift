@@ -3,14 +3,13 @@
 //Tuist는 Package를 resolve하고 framework로 구성해서 쓰는 방식입니다.
 //Dependencies의 SPM에 Package를 추가(Local 또는 Remote) 하고 dependencies에서 .external로 등록합니다.
 
-
 import ProjectDescription
+
+
 let dependencies = Dependencies(
     carthage: [],
     swiftPackageManager: SwiftPackageManagerDependencies([
-        .remote(
-                   url: "https://github.com/ReactiveX/RxSwift.git",
-                   requirement: .upToNextMajor(from: "6.5.0"))
+        .remote(url: "https://github.com/ReactiveX/RxSwift.git",requirement: .upToNextMajor(from: "6.5.0"))
     ],
     baseSettings: .settings(
         configurations: [
