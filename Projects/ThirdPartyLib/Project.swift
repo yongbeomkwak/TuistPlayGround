@@ -1,5 +1,6 @@
 import ProjectDescription
 import ProjectDescriptionHelpers
+import HampPlugin
 
 let project = Project.makeModule(
     name: "ThirdPartyLib",
