@@ -1,0 +1,7 @@
+import ProjectDescription
+import ProjectDescriptionHelpers
+
+let project = Project.makeModule(
+    name: "{{ name }}", // --name Attribute로 받은 값
+    product: .staticLibrary
+)
