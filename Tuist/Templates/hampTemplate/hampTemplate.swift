@@ -9,6 +9,11 @@ import ProjectDescription
 
 // tuist scaffold hampTemplate  --name 이름값 , --<attribute명> <값>
 
+///  현재 위치: /hampTemplate
+///  출력 위치:
+///  a. 루트 (--path를 입력받지 않을 때),
+///  b. root/scaffoldTest/   tuist scaffold hampTemplate --name Test --path scaffoldTest/ ,  -> 
+
 let nameAttribute = Template.Attribute.required("name")
 
 let template = Template(
@@ -23,11 +28,11 @@ let template = Template(
             ),
             .file(
                 path: "Project.swift",
-                templatePath: "project.stencil"
+                templatePath: "project.stencil" // /hampTemplate/project.stencil
             ),
             .directory(
                 path: "destination",
-                sourcePath: "source"
+                sourcePath: "source" // /hampTemplate/source
             )
         ]
 )
