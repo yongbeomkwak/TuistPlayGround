@@ -18,9 +18,8 @@ let dependencies = Dependencies(
     ],
     baseSettings: .settings(
         configurations: [
-            .debug(name: .dev),
-            .debug(name: .stage),
-            .release(name: .prod)
+            .debug(name: .debug),
+            .debug(name: .release)
         ]
     )),
     

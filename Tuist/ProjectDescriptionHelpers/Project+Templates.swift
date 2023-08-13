@@ -11,7 +11,8 @@ public extension Project {
         dependencies: [TargetDependency] = [], // Target의 의존성에 대한 것입니다. 라이브러리나 다른 모듈을 의존성으로 넣을 때 씁니다.
         sources: SourceFilesList = ["Sources/**"], //소스 코드의 경로
         resources: ResourceFileElements? = nil, // 리소스들이 어디에 있는지에 대한 경로입니다
-        infoPlist: InfoPlist = .default // Info.plist를 정의합니다. 기본으로 제공되는 것을 쓸 수도 있고 key 값에 따라 value를 넣어주면 커스텀으로 추가적으로 값을 넣어줄 수 있습니다. 또는 미리 Info.plist를 넣어놓고 경로를 줄 수도 있습니다.
+        infoPlist: InfoPlist = .default, // Info.plist를 정의합니다. 기본으로 제공되는 것을 쓸 수도 있고 key 값에 따라 value를 넣어주면 커스텀으로 추가적으로 값을 넣어줄 수 있습니다. 또는 미리 Info.plist를 넣어놓고 경로를 줄 수도 있습니다.
+        scripts: [TargetScript] = [.SwiftLintShell]
     ) -> Project {
         let settings: Settings = .settings(
             base: [:],
@@ -30,7 +31,7 @@ public extension Project {
             infoPlist: infoPlist,
             sources: sources,
             resources: resources,
-            scripts: [.SwiftLintShell],
+            scripts: scripts,
             dependencies: dependencies
         )
 
