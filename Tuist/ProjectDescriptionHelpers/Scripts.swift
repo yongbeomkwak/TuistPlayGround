@@ -19,4 +19,6 @@ fi
         path: .relativeToRoot("Scripts/SwiftLintRunScript.sh"),
         name: "SwiftLintShell"
     )
+    
+    static let NeedleRunScript = TargetScript.pre(path: .relativeToRoot("Scripts/NeedleRunScript.sh"),name: "NeedleRunScript")
 }
